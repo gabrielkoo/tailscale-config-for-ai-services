@@ -5,6 +5,7 @@ About Using ChatGPT/Gemini with Tailscale with an app connector, from an unrestr
 
 - Copy my config file into `https://login.tailscale.com/admin/acls/file`
 - Create a virtual machine as an `App Connector` (https://tailscale.com/kb/1281/app-connectors) ~, that isn't blocked by the AI providers~
+- Follow the setup setups to add the VM into Tailscale (https://login.tailscale.com/admin/machines/new-linux)
 - Confirm the app connectors are working via `https://login.tailscale.com/admin/apps`.
 
 ## Why Bother Use This But Not An Always On VPN?
