@@ -25,6 +25,13 @@ If you are turning on a always-on VPN just for the sake of securely connecting t
   - [x] ChatGPT Web (chatgpt.com and mobile app version on iOS)
   - [x] Sora.com
   - [x] OpenAI documentation (platform.openai.com)
+- [ ] Apple Intelligence, (Ref: https://github.com/tailscale/tailscale/issues/13963)
+  - [ ] on macOS
+  - [ ] on iOS
+  
 
-Still troubleshooting:
-- [ ] Apple Intelligence on iOS (Ref: https://github.com/tailscale/tailscale/issues/13963)
+## On the App Connector Virtual Machine
+
+If you are picking AWS, be sure to use Lightsail instead of an EC2 instance!
+
+​When configuring a virtual machine (VM) for VPN purposes, AWS Lightsail offers a compelling advantage over EC2 due to its predictable pricing and generous data transfer allowances. For instance, the $3.50 per month Linux/Unix plan includes 1 TB of data transfer, encompassing both inbound and outbound traffic, which is particularly beneficial for VPN applications that typically involve substantial data movement. In contrast, AWS EC2 charges separately for data transfer, with outbound data transfer to the internet costing $0.09 per GB beyond the free tier, which only includes the first GB free. This means that with EC2, transferring 1 TB of data out could result in significant additional costs, making Lightsail a more cost-effective and straightforward choice for setting up a VPN server.
