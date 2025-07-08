@@ -94,6 +94,17 @@ If you would like to use _SOME_ Amazon Bedrock models that are country allowlist
 							"bedrock-runtime.us-west-2.amazonaws.com",
 						],
 					},
+					{
+						"name":       "anthropic",
+						"connectors": ["tag:ai-connector"],
+						/*
+						If you would like to Claude that are country allowlisted.
+						*/
+						"domains": [
+							"api.anthropic.com",
+							"statsig.anthropic.com",
+						],
+					},
 				],
 			},
 		},
