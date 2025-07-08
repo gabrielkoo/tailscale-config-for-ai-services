@@ -25,6 +25,7 @@ If you are turning on a always-on VPN just for the sake of securely connecting t
   - [x] ChatGPT Web (chatgpt.com and mobile app version on iOS)
   - [x] Sora.com
   - [x] OpenAI documentation (platform.openai.com)
+- [x] Anthropic API (Thanks [@alexlau811](http://github.com/alexlau811/))
 - [ ] Apple Intelligence, (Ref: https://github.com/tailscale/tailscale/issues/13963)
   - [ ] on macOS
   - [ ] on iOS
