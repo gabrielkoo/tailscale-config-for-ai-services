@@ -86,12 +86,42 @@ It still doesn't fully work well, refer to https://github.com/tailscale/tailscal
 						"connectors": ["tag:ai-connector"],
 /*
 If you would like to use _SOME_ Amazon Bedrock models that are country allowlisted.
+
+The `bedrock-runtime.*.amazonaws.com` hostname is used for inference,
+while AWS also applies IP restriction via the control layer `bedrock.*.amazonaws.com` when you apply for model access
+which is country restricted.
 */
 						"domains": [
 							"bedrock.us-east-1.amazonaws.com",
 							"bedrock-runtime.us-east-1.amazonaws.com",
+							"bedrock.us-east-2.amazonaws.com",
+							"bedrock-runtime.us-east-2.amazonaws.com",
 							"bedrock.us-west-2.amazonaws.com",
 							"bedrock-runtime.us-west-2.amazonaws.com",
+							"bedrock.ap-south-1.amazonaws.com",
+							"bedrock-runtime.ap-south-1.amazonaws.com",
+							"bedrock.ap-northeast-1.amazonaws.com",
+							"bedrock-runtime.ap-northeast-1.amazonaws.com",
+							"bedrock.ap-northeast-2.amazonaws.com",
+							"bedrock-runtime.ap-northeast-2.amazonaws.com",
+							"bedrock.ap-northeast-3.amazonaws.com",
+							"bedrock-runtime.ap-northeast-3.amazonaws.com",
+							"bedrock.ap-southeast-1.amazonaws.com",
+							"bedrock-runtime.ap-southeast-1.amazonaws.com",
+							"bedrock.ap-southeast-2.amazonaws.com",
+							"bedrock-runtime.ap-southeast-2.amazonaws.com",
+							"bedrock.ca-central-1.amazonaws.com",
+							"bedrock-runtime.ca-central-1.amazonaws.com",
+							"bedrock.eu-central-1.amazonaws.com",
+							"bedrock-runtime.eu-central-1.amazonaws.com",
+							"bedrock.eu-west-1.amazonaws.com",
+							"bedrock-runtime.eu-west-1.amazonaws.com",
+							"bedrock.eu-west-2.amazonaws.com",
+							"bedrock-runtime.eu-west-2.amazonaws.com",
+							"bedrock.eu-west-3.amazonaws.com",
+							"bedrock-runtime.eu-west-3.amazonaws.com",
+							"bedrock.eu-north-1.amazonaws.com",
+							"bedrock-runtime.eu-north-1.amazonaws.com"
 						],
 					},
 					{
