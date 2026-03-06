@@ -128,11 +128,14 @@ which is country restricted.
 						"name":       "anthropic",
 						"connectors": ["tag:ai-connector"],
 						/*
-						If you would like to Claude that are country allowlisted.
+						If you would like to use Claude / Anthropic services that are country allowlisted.
+						Covers: claude.ai web app, API, CDN, and static assets.
 						*/
 						"domains": [
-							"api.anthropic.com",
-							"statsig.anthropic.com",
+							"claude.ai",
+							"*.claude.ai",
+							"anthropic.com",
+							"*.anthropic.com",
 						],
 					},
 				],
