@@ -25,6 +25,7 @@
 						"chatgpt.com",
 						"*.chatgpt.com",
 						"*.chat.openai.com",
+						"*.oaistatic.com",
 						"*.chat.openai.com.cdn.cloudflare.net",
 						"openai.com.cdn.cloudflare.net",
 						"*.openai.com.cdn.cloudflare.net",
@@ -36,10 +37,11 @@
 						"domains": [
 							"gemini.google.com",
 							"aistudio.google.com",
-							"alkalimakersuite-pa.clients6.google.com",
-							"webchannel-alkalimakersuite-pa.clients6.google.com",
 							"ai.google.dev",
+							"developerprofiles-pa.googleapis.com",
+							"*.clients6.google.com",
 							"generativelanguage.googleapis.com",
+							"content-developerprofiles-pa.googleapis.com",
 						],
 					},
 					{
@@ -133,9 +135,11 @@ which is country restricted.
 						*/
 						"domains": [
 							"claude.ai",
+							"api.anthropic.com",
 							"*.claude.ai",
-							"anthropic.com",
 							"*.anthropic.com",
+							"claude.com",
+							"*.claude.com",
 						],
 					},
 				],
