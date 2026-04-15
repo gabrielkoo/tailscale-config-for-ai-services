@@ -127,6 +127,20 @@ which is country restricted.
 						],
 					},
 					{
+						"name":       "kiro",
+						"connectors": ["tag:ai-connector"],
+						/*
+						Kiro IDE / CLI firewall allowlist.
+						Ref: https://kiro.dev/docs/privacy-and-security/firewalls/
+						*/
+						"domains": [
+							"kiro.dev",
+							"*.kiro.dev",
+							"q.us-east-1.amazonaws.com",
+							"q.eu-central-1.amazonaws.com",
+						],
+					},
+					{
 						"name":       "anthropic",
 						"connectors": ["tag:ai-connector"],
 						/*
