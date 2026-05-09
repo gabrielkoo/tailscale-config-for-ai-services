@@ -30,6 +30,8 @@
 						"openai.com.cdn.cloudflare.net",
 						"*.openai.com.cdn.cloudflare.net",
 						"sora.com",
+						// For Chrome use
+						"chromewebstore.google.com",
 					]},
 					{
 						"name":       "google-ai",
