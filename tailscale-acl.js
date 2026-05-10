@@ -20,7 +20,6 @@
 				"tailscale.com/app-connectors": [
 					{"name": "openai", "connectors": ["tag:ai-connector"], "domains": [
 						"openai.com",
-						"auth.openai.com",
 						"*.openai.com",
 						"chatgpt.com",
 						"*.chatgpt.com",
@@ -94,6 +93,8 @@ If you would like to use _SOME_ Amazon Bedrock models that are country allowlist
 The `bedrock-runtime.*.amazonaws.com` hostname is used for inference,
 while AWS also applies IP restriction via the control layer `bedrock.*.amazonaws.com` when you apply for model access
 which is country restricted.
+
+https://docs.aws.amazon.com/general/latest/gr/bedrock.html
 */
 						"domains": [
 							"bedrock.us-east-1.amazonaws.com",
