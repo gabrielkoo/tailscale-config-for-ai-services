@@ -18,31 +18,45 @@
 			"target": ["*"],
 			"app": {
 				"tailscale.com/app-connectors": [
-					{"name": "openai", "connectors": ["tag:ai-connector"], "domains": [
-						"openai.com",
-						"*.openai.com",
-						"chatgpt.com",
-						"*.chatgpt.com",
-						"*.chat.openai.com",
-						"*.oaistatic.com",
-						"*.chat.openai.com.cdn.cloudflare.net",
-						"openai.com.cdn.cloudflare.net",
-						"*.openai.com.cdn.cloudflare.net",
-						"sora.com",
-						// For Chrome use
-						"chromewebstore.google.com",
-					]},
+					{
+						"name":       "openai",
+						"connectors": ["tag:ai-connector"],
+						"domains": [
+							"openai.com",
+							"auth.openai.com",
+							"*.openai.com",
+							"chatgpt.com",
+							"*.chatgpt.com",
+							"*.chat.openai.com",
+							"*.oaistatic.com",
+							"*.chat.openai.com.cdn.cloudflare.net",
+							"openai.com.cdn.cloudflare.net",
+							"*.openai.com.cdn.cloudflare.net",
+							"sora.com",
+						],
+					},
 					{
 						"name":       "google-ai",
 						"connectors": ["tag:ai-connector"],
 						"domains": [
-							"gemini.google.com",
 							"aistudio.google.com",
 							"ai.google.dev",
-							"developerprofiles-pa.googleapis.com",
-							"*.clients6.google.com",
+							"*.aiplatform.googleapis.com",
+							"cloudresourcemanager.googleapis.com",
 							"generativelanguage.googleapis.com",
-							"content-developerprofiles-pa.googleapis.com",
+						],
+					},
+					{
+						"name":       "google-gemini",
+						"connectors": ["tag:ai-connector"],
+						/*
+						Standalone Gemini web app (gemini.google.com + iOS app).
+						Note: Google lifted the Hong Kong block, so this is no longer
+						needed from HK. Kept as a separate entry for users in other
+						regions that are still geo-restricted.
+						*/
+						"domains": [
+							"gemini.google.com",
 						],
 					},
 					{
@@ -53,6 +67,67 @@
 							"notebooklm.google",
 						],
 					},
+					{
+						"name":       "kiro",
+						"connectors": ["tag:ai-connector"],
+						/*
+						Kiro IDE / CLI firewall allowlist.
+						Ref: https://kiro.dev/docs/privacy-and-security/firewalls/
+						*/
+						"domains": [
+							"kiro.dev",
+							"*.kiro.dev",
+							"q.us-east-1.amazonaws.com",
+							"q.eu-central-1.amazonaws.com",
+							"*.us-east-1.kiro.dev",
+							"*.eu-central-1.kiro.dev",
+						],
+					},
+					{
+						"name":       "claude",
+						"connectors": ["tag:ai-connector"],
+						/*
+						If you would like to use Claude / Anthropic services that are country allowlisted.
+						Covers: claude.ai web app, API, CDN, static assets, plus fraud/telemetry endpoints.
+						*/
+						"domains": [
+							"claude.ai",
+							"api.anthropic.com",
+							"*.claude.ai",
+							"*.anthropic.com",
+							"claude.com",
+							"*.claude.com",
+							"*.siftscience.com",
+							"public.api.prod.gcp.sift.com",
+							"ocsp.edge.digicert.com",
+							"o1158394.ingest.us.sentry.io",
+							"e3913.cd.akamaiedge.net",
+						],
+					},
+					{
+						"name":       "groq",
+						"connectors": ["tag:ai-connector"],
+						"domains": [
+							"groq.com",
+							"*.groq.com",
+						],
+					},
+					{
+						"name":       "antigravity",
+						"connectors": ["tag:ai-connector"],
+						/*
+						Google Antigravity agentic IDE/CLI.
+						Note: Does not help if your account is marked to be geolocated in an unsupported country.
+						*/
+						"domains": [
+							"antigravity.google",
+							"*.antigravity.google",
+							"oauth2.googleapis.com",
+							"accounts.google.com",
+							"antigravity.googleapis.com",
+						],
+					},
+
 					{
 						"name":       "apple-intelligence",
 						"connectors": ["tag:ai-connector"],
@@ -127,36 +202,6 @@ https://docs.aws.amazon.com/general/latest/gr/bedrock.html
 							"bedrock-runtime.eu-west-3.amazonaws.com",
 							"bedrock.eu-north-1.amazonaws.com",
 							"bedrock-runtime.eu-north-1.amazonaws.com"
-						],
-					},
-					{
-						"name":       "kiro",
-						"connectors": ["tag:ai-connector"],
-						/*
-						Kiro IDE / CLI firewall allowlist.
-						Ref: https://kiro.dev/docs/privacy-and-security/firewalls/
-						*/
-						"domains": [
-							"kiro.dev",
-							"*.kiro.dev",
-							"q.us-east-1.amazonaws.com",
-							"q.eu-central-1.amazonaws.com",
-						],
-					},
-					{
-						"name":       "anthropic",
-						"connectors": ["tag:ai-connector"],
-						/*
-						If you would like to use Claude / Anthropic services that are country allowlisted.
-						Covers: claude.ai web app, API, CDN, and static assets.
-						*/
-						"domains": [
-							"claude.ai",
-							"api.anthropic.com",
-							"*.claude.ai",
-							"*.anthropic.com",
-							"claude.com",
-							"*.claude.com",
 						],
 					},
 				],
